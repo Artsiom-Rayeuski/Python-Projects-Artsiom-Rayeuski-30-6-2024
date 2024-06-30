@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Search</title>
+</head>
+<body>
+    <h1>Search Employee by ID</h1>
+    <form method="POST">
+        <label for="employee_id">Enter Employee ID:</label>
+        <input type="text" id="employee_id" name="employee_id">
+        <button type="submit">Search</button>
+    </form>
+    {% if employee_data %}
+        <div>
+            <h2>Employee Details</h2>
+            <p>ID: {{ employee_data[0] }}</p>
+            <p>Name: {{ employee_data[1] }}</p>
+            <!-- Add more employee details here -->
+        </div>
+    {% endif %}
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>

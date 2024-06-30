@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">
+  User Profile
+</h1>
+<div class="content">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label class="label has-text-weight-bold is-size-5">Email:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control has-text-weight-bold is-size-5">{{ email }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label class="label has-text-weight-bold is-size-5">Name:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control has-text-weight-bold is-size-5">{{ name }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                        <a href="/edit" class="button is-block is-
+                        info is-large is-fullwidth">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

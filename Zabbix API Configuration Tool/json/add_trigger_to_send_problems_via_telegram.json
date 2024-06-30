@@ -1,0 +1,55 @@
+{
+    "jsonrpc": "2.0",
+    "method": "action.create",
+    "params": {
+        "name": "Report problems of MySQL and SNMP via Telegram ",
+        "eventsource": 0,
+        "esc_period": "30m",
+        "filter": {
+            "evaltype": 0
+        },
+        "operations": [
+            {
+				"operationtype": "0",
+				"opmessage_usr": [
+					{
+						"userid": "3"
+					}
+				],
+				"opmessage": {
+					"default_msg": 1,
+					"mediatypeid": "16"
+				}
+			}
+        ],
+        "recovery_operations": [
+            {
+				"operationtype": "0",
+				"opmessage_usr": [
+					{
+						"userid": "3"
+					}
+				],
+				"opmessage": {
+					"default_msg": 1,
+					"mediatypeid": "16"
+				}
+			}
+        ],
+        "update_operations": [
+            {
+				"operationtype": "0",
+				"opmessage_usr": [
+					{
+						"userid": "3"
+					}
+				],
+				"opmessage": {
+					"default_msg": 1,
+					"mediatypeid": "16"
+				}
+			}
+        ]
+    },
+    "id": 1
+}

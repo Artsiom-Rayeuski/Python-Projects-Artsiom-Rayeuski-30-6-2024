@@ -1,0 +1,8 @@
+{
+  "EventID": 4624,
+  "LogonType": 3,
+  "UserName": "user1",
+  "IPAddress": "192.168.1.100",
+  "TargetDomainName": "example.com",
+  "Description": "Successful logon from user1 at IP address 192.168.1.100 to domain example.com."
+}

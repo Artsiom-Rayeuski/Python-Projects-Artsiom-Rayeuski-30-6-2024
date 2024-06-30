@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">
+Edit Profile
+</h1>
+<div class="content">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="notification is-danger">
+            {{ messages[0] }}
+          </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/edit">
+          <!-- Include any necessary hidden fields for user identification -->
+          <div class="field">
+            <label class="label" for="name">Name:</label>
+            <div class="control">
+              <input class="input" type="text" id="name" 
+              name="name" value="{{ name }}" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="email">Email:</label>
+            <div class="control">
+              <input class="input" type="email" id="email" 
+              name="email" value="{{ email }}" required>
+            </div>
+          </div>
+
+          <!-- Existing Password -->
+          <div class="field">
+            <label class="label" for="existing_password">Existing Password:</label>
+            <div class="control">
+              <input class="input" type="password" 
+              id="existing_password" name="existing_password" 
+              placeholder="Current Password" autofocus="">
+            </div>
+          </div>
+
+          <!-- New Password -->
+          <div class="field">
+            <label class="label" for="new_password">New Password:</label>
+            <div class="control">
+              <input class="input" type="password" 
+              id="new_password" name="new_password" 
+              placeholder="New Password" autofocus="">
+            </div>
+          </div>
+
+          <!-- Repeat New Password -->
+          <div class="field">
+            <label class="label" for="repeat_password">Repeat New Password:</label>
+            <div class="control">
+              <input class="input" type="password" 
+              id="repeat_password" name="repeat_password" 
+              placeholder="Confirm Password" autofocus="">
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-primary">Save Changes</button>
+            </div>
+            <div class="control">
+              <a href="/profile" class="button is-link">Cancel</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+{% endblock %}

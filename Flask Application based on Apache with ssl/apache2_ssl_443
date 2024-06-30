@@ -1,0 +1,33 @@
+<VirtualHost *:443>
+        ServerName  servername
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/flask-application
+
+        WSGIDaemonProcess flaskapp threads=5
+        WSGIScriptAlias / /var/www/flask-application/flaskapp.wsgi
+        WSGIApplicationGroup %{GLOBAL}
+        <Directory flask-application>
+             WSGIProcessGroup flaskapp
+             WSGIApplicationGroup %{GLOBAL}
+             Order deny,allow
+             Allow from all
+        </Directory>
+
+        SSLEngine on
+        SSLCertificateFile      /var/www/flask-application/ssl/ca-cert.pem
+        SSLCertificateKeyFile   /var/www/flask-application/ssl/ca-key.pem
+
+        <FilesMatch "\.(?:cgi|shtml|phtml|php)$">
+                SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+                SSLOptions +StdEnvVars
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/flaskapp-error.log
+        CustomLog ${APACHE_LOG_DIR}/flaskapp-access.log combined
+
+        SecRuleEngine On
+        SecRule ARGS:testparam "@contains test" "id:999,deny,status:403,msg:'Test Successful'"
+
+</VirtualHost>

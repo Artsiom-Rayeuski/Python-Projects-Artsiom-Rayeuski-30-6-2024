@@ -1,0 +1,1 @@
+Event ID: 4624 | Logon Type: 3 | User Name: user1 | IP Address: 192.168.1.100 | Target Domain Name: example.com | Description: Successful logon from user1 at IP address 192.168.1.100 to domain example.com.

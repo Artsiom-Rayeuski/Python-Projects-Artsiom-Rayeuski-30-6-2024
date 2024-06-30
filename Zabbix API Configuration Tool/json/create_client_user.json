@@ -1,0 +1,23 @@
+{
+    "jsonrpc": "2.0",
+    "method": "user.create",
+    "params": {
+        "username": "user",
+        "name": "user",
+        "passwd": "CompanyPassword",
+        "roleid": "1",
+        "timezone": "Europe/Warsaw",
+        "medias": [
+            {
+                "mediatypeid": "16",
+                "sendto": [
+                    "-804241675"
+                ],
+                "active": 0,
+                "severity": 63,
+                "period": "1-7,00:00-24:00"
+            }
+        ]
+    },
+    "id": 1
+}

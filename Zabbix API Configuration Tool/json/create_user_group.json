@@ -1,0 +1,33 @@
+{
+    "jsonrpc": "2.0",
+    "method": "usergroup.create",
+    "params": {
+        "name": "SNMP and MySQL monitor",
+        "hostgroup_rights": [
+            {
+                "id": "19",
+                "permission": 2
+            },
+            {
+                "id": "20",
+                "permission": 2
+            }
+        ],
+        "templategroup_rights": [
+            {
+                "id": "12",
+                "permission": 2
+            },
+            {
+                "id": "13",
+                "permission": 2
+            }
+        ],
+        "users": [
+            {
+                "userid": "3"
+            }
+        ]
+    },
+    "id": 1
+}

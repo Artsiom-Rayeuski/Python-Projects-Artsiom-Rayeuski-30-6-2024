@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# 1. set connection details
+url=http://127.0.0.1/zabbix/api_jsonrpc.php
+user=Admin
+password=zabbix
+
+# 2. get authorization token
+curl -i -X POST -H 'Content-Type: application/json' -d @Authetification.json $url
+auth=$(curl -s -X POST -H 'Content-Type: application/json' -d @Authetification.json | jq -r '.result')
+
+# 3. echo
+echo "auth"
+

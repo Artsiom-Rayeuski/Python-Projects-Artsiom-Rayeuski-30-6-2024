@@ -1,0 +1,49 @@
+{
+	"jsonrpc": "2.0",
+	"method": "action.create",
+	"params": {
+		"name": "Register MySQL servers",
+		"eventsource": "2",
+		"filter": {
+			"evaltype": "2",
+			"conditions": [
+				{
+					"conditiontype": "24",
+					"operator": "2",
+					"value": "mysql"
+				}
+			]
+		},
+		"operations": [
+			{
+				"operationtype": "4",
+				"opgroup": [
+					{
+						"groupid": "20"
+					}
+				]
+			},
+			{
+				"operationtype": "6",
+				"optemplate": [
+					{
+						"templateid": "10316"
+					}
+				]
+			},
+			{
+				"operationtype": "0",
+				"opmessage_usr": [
+					{
+						"userid": "3"
+					}
+				],
+				"opmessage": {
+					"default_msg": 1,
+					"mediatypeid": "16"
+				}
+			}
+		]
+	},
+	"id": 1
+}

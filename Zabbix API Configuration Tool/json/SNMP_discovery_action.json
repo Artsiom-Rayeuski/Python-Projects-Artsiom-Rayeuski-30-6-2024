@@ -1,0 +1,49 @@
+{
+    "jsonrpc": "2.0",
+    "method": "action.create",
+    "params": {
+        "name": "SNMP discovery action",
+        "eventsource": "1",
+        "filter": {
+            "evaltype": "1",
+            "conditions": [
+                {
+                    "conditiontype": 18,
+                    "operator": 0,
+                    "value": "{__ID__}"
+                }
+            ]
+        },
+        "operations": [
+            {
+                "operationtype": "4",
+                "opgroup": [
+                    {
+                        "groupid": "19"
+                    }
+                ]
+            },
+            {
+                "operationtype": "6",
+                "optemplate": [
+                    {
+                        "templateid": "10563"
+                    }
+                ]
+            },
+            {
+				"operationtype": "0",
+				"opmessage_usr": [
+					{
+						"userid": "3"
+					}
+				],
+				"opmessage": {
+					"default_msg": 1,
+					"mediatypeid": "16"
+				}
+			}
+        ]
+    },
+    "id": 1
+}

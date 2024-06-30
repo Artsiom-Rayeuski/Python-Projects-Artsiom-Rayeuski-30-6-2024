@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SecurityEvent>
+    <EventID>4624</EventID>
+    <LogonType>3</LogonType>
+    <UserName>user1</UserName>
+    <IPAddress>192.168.1.100</IPAddress>
+    <TargetDomainName>example.com</TargetDomainName>myexternalip.com
+    <Description>Successful logon from user1 at IP address 192.168.1.100 to domain example.com.</Description>
+</SecurityEvent>
